@@ -65,20 +65,19 @@ public class cadastrarJogadores extends jogador {
 		    	default:
 		    		System.out.println("\nJogo inválido! Tente novamente.\n");
 				}
-			
 		}
 		
 		
 		System.out.println("digite seu ID"); //quero auto incrementar esse ID depois
-		this.id = scan.nextInt();
+		this.id = scan.nextInt(); ///ADICIONAR UM TRY EXCEPTION AQUI DEPOISSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 		scan.nextLine();
-		System.out.println("Pontuação inicial do teste de BAI");
-		this.pontuacaoInicialBAI = scan.nextInt();
-		scan.nextLine();
+		//System.out.println("Pontuação inicial do teste de BAI");
+	//	this.pontuacaoInicialBAI = scan.nextInt();
+		//scan.nextLine();
 		System.out.println("Pontuação final do teste de BAI");
 		this.pontuacaoFinalBAI = scan.nextInt();
 		scan.nextLine();
-		scan.close(); //testando para o commit novos
+		//scan.close(); //testando para o commit novos  PORQUE SE FECHAR ESSE MERDINHA AQUI VAI DAR PROBLEMA NO SCANNER DE BAIXO???????
 		/*
 		 * 
 		 * 			Scanner scan = new Scanner(System.in);
@@ -91,7 +90,37 @@ public class cadastrarJogadores extends jogador {
 	}
 	@Override
 	void calcularBAIInicial() {
-		// TODO Auto-generated method stub
+		this.pontuacaoInicialBAI = 0;
+		Scanner scan2 = new Scanner(System.in);
+		//System.out.println(this.pontuacaoInicialBAI);
+		System.out.println("Abaixo está uma lista de sintomas comuns à ansiedade. Por favor, leia cuidadosamente cada\r\n"
+				+ "item da lista. Identifique o quanto você tem sido incomodado(a) por cada um dos sintomas durante\r\n"
+				+ "a última semana, incluindo hoje, informe um “1, 2, 3 ou 4” no espaço correspondente, na mesma linha\r\n"
+				+ "de cada sintoma. ");
+		System.out.println("Atualmente você está com dormência ou formigamento?");
+		
+		System.out.println("informe um ''1, 2, 3 ou 4'' de acordo com a frequência "
+				+ "\n_____________________________________________________________\n"
+				+ "1- Absolutamente nada || 2- Levemente, não me incomodou muito || 3- Moderadamente, foi desagradável mas pude suportar || 4- Gravemente, pude suportar ");
+		int op2 = scan2.nextInt();
+		scan2.nextLine();
+		//scan2.close();
+		switch (op2) {
+		case 1:
+			this.pontuacaoInicialBAI += 0;
+			break;
+		case 2:
+			this.pontuacaoInicialBAI += 1;
+			break;
+		case 3:
+			this.pontuacaoInicialBAI += 2;
+			break;
+		case 4:
+			this.pontuacaoInicialBAI += 3;
+			break;
+		default:
+    		System.out.println("\nOpção inválida! Tente novamente.\n");	
+		}
 		
 	}
 
