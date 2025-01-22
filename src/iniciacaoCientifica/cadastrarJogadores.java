@@ -97,30 +97,40 @@ public class cadastrarJogadores extends jogador {
 				+ "item da lista. Identifique o quanto você tem sido incomodado(a) por cada um dos sintomas durante\r\n"
 				+ "a última semana, incluindo hoje, informe um “1, 2, 3 ou 4” no espaço correspondente, na mesma linha\r\n"
 				+ "de cada sintoma. ");
-		System.out.println("Atualmente você está com dormência ou formigamento?");
-		
-		System.out.println("informe um ''1, 2, 3 ou 4'' de acordo com a frequência "
-				+ "\n_____________________________________________________________\n"
-				+ "1- Absolutamente nada || 2- Levemente, não me incomodou muito || 3- Moderadamente, foi desagradável mas pude suportar || 4- Gravemente, pude suportar ");
-		int op2 = scan2.nextInt();
-		scan2.nextLine();
-		//scan2.close();
-		switch (op2) {
-		case 1:
-			this.pontuacaoInicialBAI += 0;
-			break;
-		case 2:
-			this.pontuacaoInicialBAI += 1;
-			break;
-		case 3:
-			this.pontuacaoInicialBAI += 2;
-			break;
-		case 4:
-			this.pontuacaoInicialBAI += 3;
-			break;
-		default:
-    		System.out.println("\nOpção inválida! Tente novamente.\n");	
+		String [] frases = {"Atualmente você está com dormência ou formigamento?", "Alguma Sensação de calor?","Tremores nas pernas","Incapaz de relaxar","Medo que aconteça o\r\n"
+				+ "pior","Atordoado (a) ou tonto\r\n"
+						+ "(a)","Palpitação oo aceleração do coração","inseguro","Aterrorizado (a)\r\n"
+								+ "Nervoso (a)","Sensação de sufocação","Tremores nas mãos","Trêmulo (a)","Medo de perder o controle","Dificuldade de respirar","Medo de morrer","Assustado","Dor de barriga","Sensanção de desmaio"
+										+ "Rosto avermelhado","Suor (não deve levar em consideração calor"};
+		for(int i = 0;i<19;i++) {
+			System.out.println("informe um ''1, 2, 3 ou 4'' de acordo com a frequência "
+					+ "\n_____________________________________________________________\n"
+					+ "1- Absolutamente nada || 2- Levemente, não me incomodou muito || 3- Moderadamente, foi desagradável mas pude suportar || 4- Gravemente, pude suportar ");
+			System.out.println(frases[i]);
+			int op2 = scan2.nextInt();
+			scan2.nextLine();
+			//scan2.close();
+			switch (op2) {
+			case 1:
+				this.pontuacaoInicialBAI += 0;
+				break;
+			case 2:
+				this.pontuacaoInicialBAI += 1;
+				break;
+			case 3:
+				this.pontuacaoInicialBAI += 2;
+				break;
+			case 4:
+				this.pontuacaoInicialBAI += 3;
+				break;
+			default:
+	    		System.out.println("\nOpção inválida! Tente novamente.\n");	
+			}
 		}
+		//System.out.println("Atualmente você está com dormência ou formigamento?");
+		
+		
+		//ta bem gambiarra, mas finalizar amanhã
 		
 	}
 

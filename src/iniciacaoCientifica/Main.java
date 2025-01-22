@@ -6,7 +6,8 @@ package iniciacaoCientifica;
 //18/01/2025 passar para POO amanhã
 public class Main {
 	public static void main(String args[]) {
-	
+		String [] frases = {"oi", "oi2"};
+		//System.out.println(frases[0]);
 		cadastrarJogadores jogador1 = new cadastrarJogadores(null, null, 0, 0, 0);
 		jogador1.cadastrar();
 		jogador1.calcularBAIInicial();
