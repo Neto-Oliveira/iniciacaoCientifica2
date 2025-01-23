@@ -97,15 +97,14 @@ public class cadastrarJogadores extends jogador {
 				+ "item da lista. Identifique o quanto você tem sido incomodado(a) por cada um dos sintomas durante\r\n"
 				+ "a última semana, incluindo hoje, informe um “1, 2, 3 ou 4” no espaço correspondente, na mesma linha\r\n"
 				+ "de cada sintoma. ");
-		String [] frases = {"Atualmente você está com dormência ou formigamento?", "Alguma Sensação de calor?","Tremores nas pernas","Incapaz de relaxar","Medo que aconteça o\r\n"
-				+ "pior","Atordoado (a) ou tonto\r\n"
-						+ "(a)","Palpitação oo aceleração do coração","inseguro","Aterrorizado (a)\r\n"
-								+ "Nervoso (a)","Sensação de sufocação","Tremores nas mãos","Trêmulo (a)","Medo de perder o controle","Dificuldade de respirar","Medo de morrer","Assustado","Dor de barriga","Sensanção de desmaio"
-										+ "Rosto avermelhado","Suor (não deve levar em consideração calor"};
-		for(int i = 0;i<19;i++) {
-			System.out.println("informe um ''1, 2, 3 ou 4'' de acordo com a frequência "
-					+ "\n_____________________________________________________________\n"
-					+ "1- Absolutamente nada || 2- Levemente, não me incomodou muito || 3- Moderadamente, foi desagradável mas pude suportar || 4- Gravemente, pude suportar ");
+		String [] frases = {"01 - Atualmente você está com dormência ou formigamento?", "02 - Alguma Sensação de calor?","03 - Tremores nas pernas","04 - Incapaz de relaxar","05- Medo que aconteça o pior","06 - Atordoado (a) ou tonto(a)","07 - Palpitação ou aceleração do coração","08 - sem equilibrio ou inseguro","09- Aterrorizado (a)\r\n"
+								, "10 - Nervoso (a)","11 - Sensação de sufocação","12 - Tremores nas mãos","13 - Trêmulo (a)","14 - Medo de perder o controle","15 -Dificuldade de respirar","16 - Medo de morrer","17 - Assustado","18 - Dor de barriga","19 - Sensanção de desmaio"
+										 ,"20 - Rosto avermelhado","21- Suor (não deve levar em consideração calor"};
+		System.out.println("informe um ''1, 2, 3 ou 4'' de acordo com a frequência "
+				+ "\n_____________________________________________________________\n"
+				+ "1- Absolutamente nada || 2- Levemente, não me incomodou muito || 3- Moderadamente, foi desagradável mas pude suportar || 4- Gravemente, pude suportar ");
+		for(int i = 0;i<21;i++) {
+			
 			System.out.println(frases[i]);
 			int op2 = scan2.nextInt();
 			scan2.nextLine();
@@ -131,7 +130,7 @@ public class cadastrarJogadores extends jogador {
 		
 		
 		//ta bem gambiarra, mas finalizar amanhã
-		
+		//scan2.close();
 	}
 
 	@Override
